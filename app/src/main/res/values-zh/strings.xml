@@ -18,4 +18,5 @@
     <string name="error_scanning_qr">扫描二维码时出错</string>
     <string name="no_qr_detected">未检测到二维码</string>
     <string name="qr_code">二维码</string>
+    <string name="save">保存</string>
 </resources> 

@@ -18,4 +18,5 @@
     <string name="cancel">Cancel</string>
     <string name="qr_code">QR Code</string>
     <string name="permission_storage_rationale">Storage permission is needed to load images</string>
+    <string name="save">Save</string>
 </resources>

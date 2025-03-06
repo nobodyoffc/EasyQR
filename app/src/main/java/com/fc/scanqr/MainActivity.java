@@ -428,7 +428,10 @@ public class MainActivity extends AppCompatActivity {
         }
         
         builder.setView(dialogView)
-               .setPositiveButton(android.R.string.ok, null);
+               .setPositiveButton(android.R.string.ok, null)
+               .setNeutralButton(R.string.save, (dialog, which) -> {
+                   saveQRCodes(qrBitmaps);
+               });
         
         AlertDialog dialog = builder.create();
         dialog.show();
@@ -445,6 +448,7 @@ public class MainActivity extends AppCompatActivity {
             textColor = 0xFF000000;
         }
         dialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(textColor);
+        dialog.getButton(AlertDialog.BUTTON_NEUTRAL).setTextColor(textColor);
     }
 
     private void saveQRCodes(List<Bitmap> qrBitmaps) {
