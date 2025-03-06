@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.ScanQr" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">#2196F3</item>
+        <item name="colorAccent">#2196F3</item>
+    </style>
+
+    <style name="Theme.ScanQr" parent="Base.Theme.ScanQr" />
+
+    <!-- Custom Dialog Theme -->
+    <style name="Theme.ScanQr.Dialog" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="buttonBarPositiveButtonStyle">@style/Widget.ScanQr.Button</item>
+        <item name="android:background">#F5F5F5</item>
+    </style>
+
+    <style name="Widget.ScanQr.Button" parent="Widget.Material3.Button.TextButton.Dialog">
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+</resources>

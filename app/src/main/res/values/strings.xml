@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">EasyQR</string>
+    <string name="scan">Scan</string>
+    <string name="make">Make</string>
+    <string name="clear">Clear</string>
+    <string name="copy">Copy</string>
+    <string name="from_gallery">From Gallery</string>
+    <string name="text_hint">Text from QR code or to be made into QR code</string>
+    <string name="scan_notification">Click the Scan button to scan QR code</string>
+    <string name="error_scanning_qr">Error scanning QR code</string>
+    <string name="error_creating_qr">No text to create QR code</string>
+    <string name="error_saving_qr">Error saving QR code</string>
+    <string name="qr_saved">QR code saved</string>
+    <string name="no_qr_detected">No QR code detected</string>
+    <string name="permission_camera_rationale">Camera permission is needed for QR code scanning</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="qr_code">QR Code</string>
+    <string name="permission_storage_rationale">Storage permission is needed to load images</string>
+</resources>
