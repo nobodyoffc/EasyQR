@@ -413,9 +413,22 @@ public class MainActivity extends AppCompatActivity {
         QRPagerAdapter adapter = new QRPagerAdapter(qrBitmaps);
         viewPager.setAdapter(adapter);
         
+        // Get the text color based on the current theme
+        int textColor;
+        int nightModeFlags = getResources().getConfiguration().uiMode & 
+                             android.content.res.Configuration.UI_MODE_NIGHT_MASK;
+        if (nightModeFlags == android.content.res.Configuration.UI_MODE_NIGHT_YES) {
+            // Night mode is active, use white text
+            textColor = 0xFFFFFFFF;
+        } else {
+            // Day mode is active, use black text
+            textColor = 0xFF000000;
+        }
+        
         if (qrBitmaps.size() > 1) {
             pageIndicator.setVisibility(View.VISIBLE);
             pageIndicator.setText(String.format("1/%d", qrBitmaps.size()));
+            pageIndicator.setTextColor(textColor);
             
             viewPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
                 @Override
@@ -436,17 +449,7 @@ public class MainActivity extends AppCompatActivity {
         AlertDialog dialog = builder.create();
         dialog.show();
         
-        // Set the button text color based on the current theme
-        int textColor;
-        int nightModeFlags = getResources().getConfiguration().uiMode & 
-                             android.content.res.Configuration.UI_MODE_NIGHT_MASK;
-        if (nightModeFlags == android.content.res.Configuration.UI_MODE_NIGHT_YES) {
-            // Night mode is active, use white text
-            textColor = 0xFFFFFFFF;
-        } else {
-            // Day mode is active, use black text
-            textColor = 0xFF000000;
-        }
+        // Set the button text color
         dialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(textColor);
         dialog.getButton(AlertDialog.BUTTON_NEUTRAL).setTextColor(textColor);
     }

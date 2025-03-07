@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "ScanQr"
 include(":app")
+include(":FC-SDK")
