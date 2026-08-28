@@ -11,24 +11,25 @@
         android:pathData="M34,34h40v40h-40z"
         android:strokeWidth="2"
         android:strokeColor="#000000"/>
-    
+
     <!-- Position detection pattern - top left -->
     <path
         android:fillColor="#FFFFFF"
         android:pathData="M38,38h8v8h-8z"/>
-    
+
     <!-- Position detection pattern - top right -->
     <path
         android:fillColor="#FFFFFF"
         android:pathData="M62,38h8v8h-8z"/>
-    
+
     <!-- Position detection pattern - bottom left -->
     <path
         android:fillColor="#FFFFFF"
         android:pathData="M38,62h8v8h-8z"/>
-    
+
     <!-- Central data pattern -->
     <path
         android:fillColor="#FFFFFF"
         android:pathData="M50,50h8v8h-8z"/>
+
 </vector> 

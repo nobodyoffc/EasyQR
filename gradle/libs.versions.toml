@@ -1,6 +1,5 @@
 [versions]
 agp = "8.8.0"
-barcodeScanning = "17.3.0"
 cameraCore = "1.4.0-alpha04"
 core = "3.5.3"
 junit = "4.13.2"
@@ -12,13 +11,13 @@ activity = "1.10.1"
 constraintlayout = "2.2.1"
 
 [libraries]
-barcode-scanning = { module = "com.google.mlkit:barcode-scanning", version.ref = "barcodeScanning" }
 camera-camera2 = { module = "androidx.camera:camera-camera2", version.ref = "cameraCore" }
 camera-core = { module = "androidx.camera:camera-core", version.ref = "cameraCore" }
 camera-extensions = { module = "androidx.camera:camera-extensions", version.ref = "cameraCore" }
 camera-lifecycle = { module = "androidx.camera:camera-lifecycle", version.ref = "cameraCore" }
 camera-view = { module = "androidx.camera:camera-view", version.ref = "cameraCore" }
 core = { module = "com.google.zxing:core", version.ref = "core" }
+android-integration = { module = "com.journeyapps:zxing-android-embedded", version = "4.3.0" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }

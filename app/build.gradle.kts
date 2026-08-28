@@ -10,8 +10,8 @@ android {
         applicationId = "com.fc.scanqr"
         minSdk = 23
         targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 2
+        versionName = "2.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -36,14 +36,14 @@ android {
 }
 
 dependencies {
-
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
     
-    // ZXing for QR code generation
+    // ZXing for QR code generation and scanning
     implementation(libs.core)
+    implementation(libs.android.integration)
     
     // CameraX dependencies
     implementation(libs.camera.core)
@@ -51,9 +51,6 @@ dependencies {
     implementation(libs.camera.lifecycle)
     implementation(libs.camera.view)
     implementation(libs.camera.extensions)
-    
-    // ML Kit for barcode scanning
-    implementation(libs.barcode.scanning)
     
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
