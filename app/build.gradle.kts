@@ -10,14 +10,33 @@ android {
         applicationId = "com.fc.scanqr"
         minSdk = 23
         targetSdk = 34
-        versionCode = 2
-        versionName = "2.0"
+        versionCode = 3
+        versionName = "2.3"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    signingConfigs {
+        create("release") {
+            // Shares the Safe release key. Credentials live outside the repo, in
+            // ~/.gradle/gradle.properties; there is no fallback to the debug key.
+            val storePath = providers.gradleProperty("SAFE_RELEASE_STORE_FILE").orNull
+            if (!storePath.isNullOrBlank()) {
+                storeFile = file(storePath)
+                storePassword = providers.gradleProperty("SAFE_RELEASE_STORE_PASSWORD").orNull
+                keyAlias = providers.gradleProperty("SAFE_RELEASE_KEY_ALIAS").orNull
+                keyPassword = providers.gradleProperty("SAFE_RELEASE_KEY_PASSWORD").orNull
+            }
+            // minSdk 23 still needs v1 for API 23.
+            enableV1Signing = true
+            enableV2Signing = true
+            enableV3Signing = true
+        }
+    }
+
     buildTypes {
         release {
+            signingConfig = signingConfigs.getByName("release")
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
